@@ -67,7 +67,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="QuizCss.css" />
-    <Content Include="QuizHTML.html" />
+    <Content Include="index.html" />
     <Content Include="QuizJavaScript.js" />
     <Content Include="Web.config" />
   </ItemGroup>

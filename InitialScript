@@ -1,0 +1,70 @@
+"use strict";
+var questionArray = [];
+var scoreArray = [];
+//var displayCorrect, start, end, wrongAns, correctAns, questionItem;
+var Question = {
+    idNumber: 1,
+    queItem: "What is the healthiest lunch?",
+    state: false,
+    liArray: ["sandwich", ["banana", true], "hot dog", "dowhatyoulike"]
+}
+var Question2 = {
+    idNumber: 2,
+    queItem: "How many friends do you have in the room?",
+    state: false,
+    liArray: ["4", "none", "i don't know", ["everyone", true]]
+}
+var Question3 = {
+    idNumber: 3,
+    queItem: "How many week (at mininum) does it take to finish camp?",
+    state: false,
+    liArray: [["9", true], "weeks?", "52", "Uuuh, repeat the question."]
+}
+var Question4 = {
+    idNumber: 4,
+    queItem: "When is it quitting time?",
+    state: false,
+    liArray: ["when the bell rings", ["never", true] , "8.34hrs", "dowhatyoulike"]
+}
+var Question5 = {
+    idNumber: 5,
+    queItem: "What does it take to be awesome?",
+    state: false,
+    liArray: [["Grit", true], "that's impossible", "Money", "Who let the dogs out?"]
+}
+function displayAns() {
+    //displays reply answer, adds answer to question array, increments score if appropriate.
+
+
+}
+function displayQuestion() {
+    //displays question when next button is clicked
+    for (var i = 0; i < liArray.length; i++) {
+        if (liArray[i][1]) {
+            document.getElementById("list").innerHTML += '<li onclick="displayAns();">' + liArray[i][0] + '</li>';
+        } else if(liArray[i]) {
+            document.getElementById("list").innerHTML += '<li onclick="hideOption();">' + liArray[i] + '</li>';
+        }
+    }
+
+}
+function submitQ() {
+    //ends quiz and displays score
+
+}
+function finalScore() {
+    //calculates score
+
+}
+function hideOption() {
+    //hides incorrect answers
+
+}
+
+start = confirm("It is time for a Quiz?");
+if (start) {
+
+
+
+
+}

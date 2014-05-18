@@ -2,36 +2,28 @@
 var score = 0;    //score starts at zero
 var page = 0;     // app starts before page 1 of the quiz
 var access;   //access needs to be 1 to go to the next question page
-var header = document.getElementById("header"); header.innerHTML = "<h1> READY? </h1>";   //header div
+var header = document.getElementById("header");
+header.innerHTML = "<h1> READY? </h1>";   //header div
 if (page === 0) { header.firstChild.style.padding = "30px"; }
 var list = document.getElementById("list");       // div that shows the answers
 list.innerHTML = "<li style='visibility: hidden;'></li><li style='visibility: hidden;'></li><li style='visibility: hidden;'></li><li style='visibility: hidden;'></li><li style='visibility: hidden;'></li>";
 var next = document.getElementById("nextButton"); //store nextButton div
 var quiz = [{
     Q: "Which guitarist was nominated 15 times for a Grammy Award, yet received none?", A1: "Joe Satriani",
-    A2: "Steve Vai", A3: "Eddie Van Halen", A4: "Eric Clapton", A5: "Jimi Hendrix"
-},
-    {
-        Q: "What did the programming language Mumps (Multi-User Multi-Programming System) originally stand for?",
+    A2: "Steve Vai", A3: "Eddie Van Halen", A4: "Eric Clapton", A5: "Jimi Hendrix"},
+    { Q: "What did the programming language Mumps (Multi-User Multi-Programming System) originally stand for?",
         A1: "Multi-User Multi-Programming System", A2: "Multi-User Massachusetts Prototype System",
         A3: "Massachusetts General Hospital Utility Multi-Programming System", A4: "Massachusetts Utility Multi-Purpose System",
-        A5: "Maintenance Utility Multi-Programming System"
-    },
-    {
-        Q: "What is the approximate pH of baking soda?",
-        A1: "8", A2: "8.5", A3: "6.5", A4: "9", A5: "7.5"
-    },
-    {
-        Q: "What type of pool shot is hitting the cue ball into an object ball which hits the cushion and bounces off into a pocket?",
-        A1: "Carom Shot", A2: "Break Shot", A3: "Push Shot", A4: "Jump Shot", A5: "Bank Shot"
-    },
-    {
-        Q: "What is the fewest total amount of moves possible to checkmate your opponent in Chess?", A1: "3", A2: "4",
-        A3: "2", A4: "1", A5: "5"
-    }];   //array of questions and answers
+        A5: "Maintenance Utility Multi-Programming System"},
+    { Q: "What is the approximate pH of baking soda?",
+        A1: "8", A2: "8.5", A3: "6.5", A4: "9", A5: "7.5"},
+    { Q: "What type of pool shot is hitting the cue ball into an object ball which hits the cushion and bounces off into a pocket?",
+        A1: "Carom Shot", A2: "Break Shot", A3: "Push Shot", A4: "Jump Shot", A5: "Bank Shot" },
+    { Q: "What is the fewest total amount of moves possible to checkmate your opponent in Chess?", A1: "3", A2: "4",
+        A3: "2", A4: "1", A5: "5"}];   //array of questions and answers
 var changePage = function () {
     if (page === 0) {
-        access = 1;
+        access = 1;          
     };
     if (access === 0 && page < 6) { alert("Oops, choose an answer first."); };
     if (access === 1) {
